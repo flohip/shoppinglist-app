@@ -1,7 +1,28 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 .App {
   text-align: center;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 1fr 1fr;
 }
 
 body {
   background-color: orange;
+}
+
+.Shopping_List {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+}
+
+.center_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
