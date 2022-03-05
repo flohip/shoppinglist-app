@@ -7,6 +7,7 @@ const url = 'https://fetch-me.vercel.app/api/shopping/items';
 export function ShoppingList() {
   const [items, setItems] = useState([]);
   const [searchItems, setSearchItems] = useState([]);
+  const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -30,14 +31,23 @@ export function ShoppingList() {
       search(event.target.value, items, { keySelector: obj => obj.name.de })
     );
   }
+  function clickHandler() {
+    return setIsClicked(!isClicked);
+  }
   return (
     <>
-      <div className="Search_Bar">
+      <div className="search_Bar center_flex">
         <input type="text" placeholder="search" onChange={fuzzySearch} />
       </div>
-      <ul>
+      <ul className="suggestion_List center_flex">
         {searchItems.map(item => (
-          <li key={item._id}>{item.name.de}</li>
+          <li
+            onClick={clickHandler}
+            className="suggestion_List_Item center_flex "
+            key={item._id}
+          >
+            <p>{item.name.de}</p>
+          </li>
         ))}
       </ul>
     </>

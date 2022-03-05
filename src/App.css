@@ -8,21 +8,20 @@
   height: 100vh;
   display: grid;
   justify-content: center;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
 }
 
 body {
-  background-color: orange;
+  background-color: lightgrey;
+  background-image: url('https://edeka-spanjolli.de/wp-content/uploads/2021/07/Eingangsbereich-1024x683.jpg');
 }
 
-.Shopping_List {
+.shopping_List {
+  background-color: purple;
+
   display: flex;
   flex-direction: column;
+  /* align-items: center; */
   width: 80vw;
-}
-
-.center_flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-width: var(--min-width);
 }

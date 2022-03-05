@@ -1,0 +1,10 @@
+:root {
+  --lightred-color: rgb(255, 100, 100);
+  --lightgreen-color: rgb(100, 255, 100);
+  --lightgreen-hover-color: rgb(50, 200, 50);
+
+  --lightblue-color: rgb(100, 100, 255);
+  --lightorange-color: rgb(255, 255, 100);
+
+  --min-width: 300px;
+}
