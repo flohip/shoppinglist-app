@@ -6,16 +6,32 @@
 .App {
   text-align: center;
   height: 100vh;
+  width: 100vw;
   display: grid;
   justify-content: center;
-  grid-template-rows: 1fr 2fr;
+  align-content: center;
+  grid-template-rows: 1fr 2fr 1fr;
 }
 
 body {
+  height: inherit;
+  width: inherit;
   background-color: lightgrey;
   background-image: url('https://edeka-spanjolli.de/wp-content/uploads/2021/07/Eingangsbereich-1024x683.jpg');
+  background-size: cover;
 }
 
+.active_List {
+  background-color: hotpink;
+  height: calc(var(--min-width) / 2);
+  max-height: calc(var(--min-width) * 2);
+  list-style-type: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1rem;
+}
 .shopping_List {
   background-color: purple;
 
@@ -24,4 +40,16 @@ body {
   /* align-items: center; */
   width: 80vw;
   min-width: var(--min-width);
+}
+
+.inactive_List {
+  background-color: turquoise;
+  height: calc(var(--min-width) / 2);
+  max-height: calc(var(--min-width) * 2);
+  list-style-type: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1rem;
 }
