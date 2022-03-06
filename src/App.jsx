@@ -6,13 +6,9 @@ import { ShoppingList } from './Components/ShoppingList.jsx';
 
 export function App() {
   return (
-    <div className="App">
-      <div className="body_div center_grid">
-        <div className="active_List"></div>
-        <div className="shopping_List">
-          <ShoppingList />
-        </div>
-        <div className="inactive_List hidden"></div>
+    <div className="App center_flex">
+      <div className="shopping_List">
+        <ShoppingList />
       </div>
     </div>
   );
