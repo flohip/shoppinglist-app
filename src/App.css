@@ -22,7 +22,7 @@
 }
 
 .active_List {
-  background-color: hotpink;
+  /* background-color: hotpink; */
   height: calc(var(--min-width) / 2);
   max-height: var(--min-width);
   width: inherit;
@@ -43,7 +43,7 @@
 }
 
 .inactive_List {
-  background-color: turquoise;
+  /* background-color: turquoise; */
   height: calc(var(--min-width) / 2);
   max-height: var(--min-width);
   width: inherit;

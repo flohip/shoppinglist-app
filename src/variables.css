@@ -1,10 +1,18 @@
 :root {
-  --lightred-color: rgb(255, 100, 100);
-  --lightgreen-color: rgb(100, 255, 100);
-  --lightgreen-hover-color: rgb(50, 200, 50);
+  --black-color: black;
+  --white-color: white;
 
-  --lightblue-color: rgb(100, 100, 255);
-  --lightorange-color: rgb(255, 255, 100);
+  --red-color: rgb(255, 100, 100);
+  --red-hover-color: rgb(200, 50, 50);
+
+  --green-color: rgb(100, 255, 100);
+  --green-hover-color: rgb(50, 200, 50);
+
+  --blue-color: rgb(100, 100, 255);
+  --blue-hover-color: rgb(50, 50, 200);
+
+  --orange-color: rgb(255, 100, 0);
+  --orange-hover-color: rgb(200, 50, 0);
 
   --min-width: 300px;
 }

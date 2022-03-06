@@ -1,17 +1,16 @@
 .search_Bar {
-  background-color: var(--lightblue-color);
-  width: var(--min-width);
+  background-color: var(--blue-color);
+  min-width: var(--min-width);
   min-height: calc(var(--min-width) / 5);
-
+  box-shadow: 0 0 10px 5px black;
   align-self: center;
   border-radius: 2vh;
 }
 
 .suggestion_List {
   max-height: var(--min-width);
-  background-color: yellow;
+  /* background-color: yellow; */
   list-style-type: none;
-  border: 3px solid yellow;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -20,11 +19,12 @@
 }
 
 .suggestion_List_Item {
-  background-color: var(--lightgreen-color);
+  background-color: var(--blue-color);
+  color: white;
   width: calc(var(--min-width) / 2);
   height: 3rem;
   border-radius: 0.5rem;
-  box-shadow: 0 0 1px 1px black;
+  box-shadow: 0 0 5px 2px black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,5 +32,5 @@
 
 .suggestion_List_Item:hover {
   cursor: pointer;
-  background-color: var(--lightgreen-hover-color);
+  background-color: var(--blue-hover-color);
 }
