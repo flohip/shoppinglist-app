@@ -1,21 +1,22 @@
 .search_Bar {
   background-color: var(--lightblue-color);
   width: var(--min-width);
-  height: 8vh;
+  min-height: calc(var(--min-width) / 5);
+
   align-self: center;
   border-radius: 2vh;
 }
 
 .suggestion_List {
-  height: calc(var(--min-width) / 2);
-  max-height: calc(var(--min-width) * 2);
+  max-height: var(--min-width);
   background-color: yellow;
   list-style-type: none;
-
+  border: 3px solid yellow;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   padding: 1rem;
+  overflow-x: auto;
 }
 
 .suggestion_List_Item {

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './ShoppingList.css';
 import { search } from 'fast-fuzzy';
+import { print as p } from '../utils.js';
 
 const url = 'https://fetch-me.vercel.app/api/shopping/items';
 
@@ -14,7 +15,7 @@ export function ShoppingList() {
       try {
         const response = await fetch(url);
         const data = await response.json();
-        console.log(data.data);
+        p(data.data);
         setItems(data.data);
 
         return data.data;

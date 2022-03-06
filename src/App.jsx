@@ -7,13 +7,13 @@ import { ShoppingList } from './Components/ShoppingList.jsx';
 export function App() {
   return (
     <div className="App">
-      <body className="">
+      <div className="body_div center_grid">
         <div className="active_List"></div>
         <div className="shopping_List">
           <ShoppingList />
         </div>
         <div className="inactive_List"></div>
-      </body>
+      </div>
     </div>
   );
 }
