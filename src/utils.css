@@ -10,3 +10,7 @@
   align-content: center;
   grid-template-rows: 1fr 2fr 1fr;
 }
+
+.hidden {
+  display: none;
+}

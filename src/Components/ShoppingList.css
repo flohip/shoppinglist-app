@@ -1,16 +1,27 @@
 .search_Bar {
-  background-color: var(--blue-color);
-  min-width: var(--min-width);
-  min-height: calc(var(--min-width) / 5);
+  background: linear-gradient(
+    0deg,
+    rgba(4, 115, 213, 1) 0%,
+    rgba(98, 22, 212, 1) 100%
+  );
+  min-width: 300px;
+  min-height: 60px;
   box-shadow: 0 0 10px 5px black;
   align-self: center;
   border-radius: 2vh;
 }
 
 .suggestion_List {
-  max-height: var(--min-width);
+  max-height: calc(var(--min-width) * 2);
   /* background-color: yellow; */
+  background: linear-gradient(
+    90deg,
+    rgba(4, 115, 213, 1) 0%,
+    rgba(98, 22, 212, 1) 100%
+  );
   list-style-type: none;
+  box-shadow: 0 0 10px 5px black;
+  border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -19,12 +30,17 @@
 }
 
 .suggestion_List_Item {
-  background-color: var(--blue-color);
-  color: white;
+  background: rgb(0, 162, 179);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 162, 179, 1) 0%,
+    rgba(176, 38, 249, 1) 100%
+  );
+  color: var(--bright-color);
   width: calc(var(--min-width) / 2);
   height: 3rem;
   border-radius: 0.5rem;
-  box-shadow: 0 0 5px 2px black;
+  box-shadow: 0 0 2px 1px white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,5 +48,19 @@
 
 .suggestion_List_Item:hover {
   cursor: pointer;
-  background-color: var(--blue-hover-color);
+  color: var(--dark-color);
+  box-shadow: 0 0 2px 1px black;
+
+  background: rgb(187, 195, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(187, 195, 255, 1) 0%,
+    rgba(182, 255, 172, 1) 100%
+  );
+}
+
+.suggestion_List_Item:active {
+  cursor: pointer;
+  color: var(--dark-color);
+  background: var(--click-color);
 }

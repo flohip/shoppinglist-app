@@ -12,7 +12,7 @@ export function App() {
         <div className="shopping_List">
           <ShoppingList />
         </div>
-        <div className="inactive_List"></div>
+        <div className="inactive_List hidden"></div>
       </div>
     </div>
   );

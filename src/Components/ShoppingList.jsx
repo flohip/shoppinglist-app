@@ -33,8 +33,9 @@ export function ShoppingList() {
       search(event.target.value, items, { keySelector: obj => obj.name.de })
     );
   }
-  function clickHandler(event) {
+  function clickHandler(event, id) {
     p('item got clicked');
+    p(id);
     // const selectedIndex = event.target.options.selectedIndex;
     // console.log(event.target.options[selectedIndex].getAttribute('key'));
     const item = event.target;
@@ -46,13 +47,13 @@ export function ShoppingList() {
   return (
     <>
       <div className="search_Bar center_flex">
-        <input type="text" placeholder="search" onChange={fuzzySearch} />
+        <input type="text" placeholder="Suche..." onChange={fuzzySearch} />
       </div>
       <ul className="suggestion_List center_flex">
         {searchItems.map(item => (
           <li
             key={item._id}
-            onClick={() => clickHandler(item._id)}
+            onClick={() => clickHandler(item._id, item.name.de)}
             className="suggestion_List_Item center_flex "
           >
             <p>{item.name.de}</p>
