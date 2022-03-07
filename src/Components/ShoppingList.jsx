@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import './ShoppingList.css';
+import '../utils.css';
+
 import { search } from 'fast-fuzzy';
 import { print as p } from '../utils.js';
 
@@ -34,6 +36,7 @@ export function ShoppingList() {
       search(event.target.value, items, { keySelector: obj => obj.name.de })
     );
   }
+
   function clickHandlerSuggestionList(_id, name) {
     setIsActive(true);
     p({ _id, name });
@@ -59,6 +62,7 @@ export function ShoppingList() {
 
   return (
     <>
+      <h1>Shopping List</h1>
       <ul className="active_List center_flex">
         {storedItems.map(item => (
           <li
@@ -72,7 +76,13 @@ export function ShoppingList() {
       </ul>
 
       <div className="search_Bar center_flex">
-        <input type="text" placeholder="Suche..." onChange={fuzzySearch} />
+        <label htmlFor="#searchBar">Was wollen sie kaufen?</label>
+        <input
+          id="searchBar"
+          type="text"
+          placeholder="Suche..."
+          onChange={fuzzySearch}
+        />
       </div>
       <ul className="suggestion_List center_flex">
         {searchItems.map(item => (

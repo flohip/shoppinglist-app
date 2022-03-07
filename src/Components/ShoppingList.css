@@ -1,3 +1,10 @@
+h1 {
+  color: var(--bright-color);
+  text-shadow: -1px 0 var(--dark-color), 0 1px var(--dark-color),
+    1px 0 var(--dark-color), 0 -1px var(--dark-color);
+  font-size: 3rem;
+}
+
 .search_Bar {
   background: linear-gradient(
     0deg,
@@ -10,18 +17,26 @@
   box-shadow: 0 0 10px 5px black;
   align-self: center;
   border-radius: 2vh;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.search_Bar > label {
+  color: white;
 }
 
 .suggestion_List {
+  min-height: calc(var(--min-width) * 1);
   max-height: calc(var(--min-width) * 2);
   /* background-color: yellow; */
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(4, 115, 213, 1) 0%,
     rgba(98, 22, 212, 1) 100%
-  );
+  ); */
   list-style-type: none;
-  box-shadow: 0 0 10px 5px black;
+  /* box-shadow: 0 0 10px 5px black; */
   border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -38,7 +53,7 @@
     rgba(176, 38, 249, 1) 100%
   );
   color: var(--bright-color);
-  width: calc(var(--min-width) / 2);
+  width: calc(var(--min-width) / 5 * 2);
   height: 3rem;
   border-radius: 0.5rem;
   box-shadow: 0 0 2px 1px white;
@@ -86,7 +101,7 @@
     rgba(222, 222, 0, 1) 100%
   );
   color: var(--bright-color);
-  width: calc(var(--min-width) / 2);
+  width: calc(var(--min-width) / 5 * 2);
   height: 3rem;
   border-radius: 0.5rem;
   box-shadow: 0 0 2px 1px white;
